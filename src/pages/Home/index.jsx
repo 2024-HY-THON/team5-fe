@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as S from '../../styles/Home/home.style';
 import {
   CommonGreyBox,
@@ -25,6 +26,11 @@ const Home = () => {
           <CommonGreyBox />
         </TempCardWrapper>
       </CardSection>
+
+      {/* 로그인 페이지로 이동하는 링크 */}
+      <Link to="/login">
+        <button>로그인 페이지로 가기</button>
+      </Link>
     </S.HomeWrapper>
   );
 };
