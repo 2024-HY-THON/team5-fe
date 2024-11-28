@@ -23,7 +23,7 @@ const Login = () => {
           <img
             src="/naver.png"
             alt="네이버 아이콘"
-            style={{ marginRight: '10px', width: '35px', height: '30px' }}
+            style={{ marginRight: '8px', width: '30px', height: '30px' }}
           />
           네이버로 로그인
         </SocialButton>
@@ -32,8 +32,8 @@ const Login = () => {
         >
           <img
             src="/google.png"
-            alt="네이버 아이콘"
-            style={{ marginRight: '10px', width: '24px', height: '24px' }}
+            alt="구글 아이콘"
+            style={{ marginRight: '8px', width: '24px', height: '24px' }}
           />
           구글로 로그인
         </SocialButton>

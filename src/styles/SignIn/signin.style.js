@@ -10,14 +10,14 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 100px; /* 적절한 크기로 조정 */
+  width: 100px; 
   margin-bottom: 80px; /* 로고와 다음 요소 간의 간격 */
 `;
 
 export const Title = styled.h1`
-  font-size: 28px; /* 크기를 더 크게 설정 */
+  font-size: 28px; 
   font-weight: bold;
-  margin: 16px 0; /* 간격 추가 */
+  margin: 16px 0; 
 `;
 
 export const SubTitle = styled.h2`

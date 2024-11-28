@@ -20,10 +20,13 @@ export const ButtonContainer = styled.div`
 
 export const SocialButton = styled.button`
   width: 100%;
-  padding: 10px;
+  height: 60px;
   border-radius: 50px;
-  font-size: 18px;
-  color: black;
+  background-color: #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
   cursor: pointer;
   border: none;
 `;
