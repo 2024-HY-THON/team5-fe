@@ -7,10 +7,9 @@ export const CommonWrapper = styled.div`
   padding: 16px 20px;
 `;
 
-export const CommonGreyBox = styled.div`
-  background: #d9d9d9;
-  border-radius: 27px;
-
+export const CommonCard = styled.div`
+  border-radius: ${(props) => props.styles?.['border-radius'] || '27px'};
+  background: ${(props) => props.styles?.background || '#d9d9d9'};
   width: ${(props) => props.styles?.width || '100%'};
   height: ${(props) => props.styles?.height || '171px'};
 `;
