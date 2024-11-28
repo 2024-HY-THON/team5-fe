@@ -10,14 +10,14 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 100px; 
-  margin-bottom: 80px; /* 로고와 다음 요소 간의 간격 */
+  width: 100px;
+  margin-bottom: 40px; /* 로고와 다음 요소 간의 간격 */
 `;
 
 export const Title = styled.h1`
-  font-size: 28px; 
+  font-size: 28px;
   font-weight: bold;
-  margin: 16px 0; 
+  margin: 16px 0;
 `;
 
 export const SubTitle = styled.h2`
@@ -44,7 +44,7 @@ export const Button = styled.button`
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 50px;
+  margin-top: 30px;
 
   &:hover {
     background-color: #e6b800;

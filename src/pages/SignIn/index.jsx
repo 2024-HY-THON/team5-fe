@@ -21,8 +21,8 @@ const SignIn = () => {
 
   return (
     <Container>
-      <Logo src="/logo.png" alt="별별 로고" />
-      <img src="/star.png" alt="Star" />
+      <Logo src="/assets/icon/logo.svg" alt="별별 로고" />
+      <img src="/assets/icon/star.svg" alt="Star" />
       <Title>반가워요!</Title>
       <SubTitle>사용할 닉네임을 입력해 주세요</SubTitle>
       <Input
