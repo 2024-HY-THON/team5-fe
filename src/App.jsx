@@ -4,6 +4,7 @@ import * as S from './styles/Common/common.style';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Community from './pages/Community';
+import SignIn from './pages/SignIn';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path="/community" element={<Community />} />
           </Routes>
         </S.CommonWrapper>

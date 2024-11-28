@@ -1,35 +1,43 @@
 import React from 'react';
 import {
   PageContainer,
-  SocialButtonContainer,
   SocialButton,
-  StartButton,
-  StartButtonContainer,
+  ButtonContainer,
 } from '../../styles/Login/login.style';
 
 const Login = () => {
   return (
     <PageContainer>
-      {/* 로그 이미지 */}
       <img
-        src="/"
-        alt="로그인 이미지"
-        style={{ width: '100%', maxWidth: '300px', marginBottom: '30px' }}
+        src="/logo.png"
+        alt="로고 이미지"
+        style={{ width: '100px', height: '50px' }}
       />
-
-      {/* 소셜 로그인 버튼들 */}
-      <SocialButtonContainer>
-        <SocialButton>소셜 로그</SocialButton>
-        <SocialButton>소셜 로그</SocialButton>
-        <SocialButton>소셜 로그</SocialButton>
-      </SocialButtonContainer>
-
-      {/* 시작하기 버튼들 */}
-      <StartButtonContainer>
-        <StartButton>~로 시작하기</StartButton>
-        <StartButton>~로 시작하기</StartButton>
-        <StartButton>~로 시작하기</StartButton>
-      </StartButtonContainer>
+      <img
+        src="/star.png"
+        alt="별별 이미지"
+        style={{ width: '300px', height: '300px', marginBottom: '10px' }}
+      />
+      <ButtonContainer>
+        <SocialButton style={{ backgroundColor: '#00C300' }}>
+          <img
+            src="/naver.png"
+            alt="네이버 아이콘"
+            style={{ marginRight: '10px', width: '35px', height: '30px' }}
+          />
+          네이버로 로그인
+        </SocialButton>
+        <SocialButton
+          style={{ backgroundColor: 'white', border: '1px solid #d1d1d1' }}
+        >
+          <img
+            src="/google.png"
+            alt="네이버 아이콘"
+            style={{ marginRight: '10px', width: '24px', height: '24px' }}
+          />
+          구글로 로그인
+        </SocialButton>
+      </ButtonContainer>
     </PageContainer>
   );
 };
