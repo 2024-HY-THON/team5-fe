@@ -7,18 +7,6 @@ export const CommonWrapper = styled.div`
   padding: 16px 20px;
 `;
 
-export const CommonHeader = styled.header`
-  background-color: #fff;
-  border: 1px solid #181818;
-  min-height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-`;
-
 export const CommonGreyBox = styled.div`
   background: #d9d9d9;
   border-radius: 27px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as S from './styles/Common/common.style';
 import Home from './pages/Home';
@@ -9,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <S.CommonHeader />
+        {/* <S.CommonHeader /> */}
         <S.CommonWrapper>
           <Routes>
             <Route path="/" element={<Home />} />
