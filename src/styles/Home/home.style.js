@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.body`
-  height: 100vh;
+  height: fit-content;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;

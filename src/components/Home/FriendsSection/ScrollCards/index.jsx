@@ -41,6 +41,41 @@ const ScrollCards = () => {
             height: '142px',
           }}
         />
+        <CommonCard
+          styles={{
+            'border-radius': '20px',
+            width: '103px',
+            height: '142px',
+          }}
+        />
+        <CommonCard
+          styles={{
+            'border-radius': '20px',
+            width: '103px',
+            height: '142px',
+          }}
+        />
+        <CommonCard
+          styles={{
+            'border-radius': '20px',
+            width: '103px',
+            height: '142px',
+          }}
+        />
+        <CommonCard
+          styles={{
+            'border-radius': '20px',
+            width: '103px',
+            height: '142px',
+          }}
+        />
+        <CommonCard
+          styles={{
+            'border-radius': '20px',
+            width: '103px',
+            height: '142px',
+          }}
+        />
       </div>
     </div>
   );

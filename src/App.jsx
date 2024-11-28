@@ -5,11 +5,12 @@ import * as S from './styles/Common/common.style';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Community from './pages/Community';
+import BottomNav from './components/Common/BottomNav';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         {/* <S.CommonHeader /> */}
         <S.CommonWrapper>
           <Routes>
@@ -18,6 +19,7 @@ function App() {
             <Route path="/community" element={<Community />} />
           </Routes>
         </S.CommonWrapper>
+        <BottomNav />
       </div>
     </Router>
   );

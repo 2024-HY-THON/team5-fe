@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const CommonWrapper = styled.div`
-  height: 100vh;
-  padding-bottom: 70px;
+  height: fit-content;
   background-color: #ffffff;
-  padding: 16px 20px;
+  padding: 16px 20px 104px 20px;
 `;
 
 export const CommonCard = styled.div`

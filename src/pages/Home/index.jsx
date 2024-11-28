@@ -17,12 +17,12 @@ const Home = () => {
         />
       </S.HomeHeader>
       <S.HomeWrapper>
-        <DailyBanner />
-        <RankSection />
-        <FriendsSection />
         <Link to="/login">
           <button>로그인 페이지로 가기</button>
         </Link>
+        <DailyBanner />
+        <RankSection />
+        <FriendsSection />
       </S.HomeWrapper>
     </>
   );

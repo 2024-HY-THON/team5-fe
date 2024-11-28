@@ -12,6 +12,7 @@ body {
   font-family: 'PretendardVariable', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
 }
 
 code {
@@ -37,4 +38,8 @@ h2 {
   font-weight: 700;
   line-height: 28.64px;
   margin: 2px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
