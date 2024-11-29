@@ -7,9 +7,6 @@ export const CommunityContainer = styled.div`
   width: 100%;
 
   background-color: #f2f2f2;
-
-  margin: -16px -20px; // 패딩값 초기화
-  width: 100vw; // 전체 너비 반영
 `;
 
 export const CommunityCategoryBox = styled.div`
