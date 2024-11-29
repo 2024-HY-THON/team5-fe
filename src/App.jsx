@@ -13,6 +13,7 @@ import BottomNav from './components/Common/BottomNav';
 import FriendList from './pages/Friend/FriendList';
 import FriendRequest from './pages/Friend/FriendRequest';
 import FriendSearch from './pages/Friend/FriendSearch';
+import FriendDetail from './pages/Friend/FriendDetail';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route index element={<FriendList />} />
             <Route path="request" element={<FriendRequest />} />
             <Route path="search" element={<FriendSearch />} />
+            <Route path="detail/:id" element={<FriendDetail />} />
           </Route>
         </Routes>
         <BottomNav />

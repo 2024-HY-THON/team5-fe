@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
-import * as S from '../../../styles/Friend/friend-header.style';
+import * as S from '../../../styles/Friend/friendHeader';
 // assets
-import { ArrowIcon } from '../../../constants/Friend/icon';
+import { ARROW_ICON } from '../../../constants/Friend/icon';
 
 const Header = ({ header }) => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Header = ({ header }) => {
   return (
     <S.HeaderWrapper>
       <S.HeaderButton
-        src={ArrowIcon}
+        src={ARROW_ICON}
         alt="arrow"
         onClick={() => navigate(-1)}
       />

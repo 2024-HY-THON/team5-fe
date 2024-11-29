@@ -5,7 +5,11 @@ import * as S from '../../../styles/Friend/friend.style';
 // components
 import Header from '../../../components/Friend/FriendHeader';
 // assets
-import { RemoveIcon, RightIcon, AddIcon } from '../../../constants/Friend/icon';
+import {
+  REMOVE_ICON,
+  RIGHT_ICON,
+  ADD_ICON,
+} from '../../../constants/Friend/icon';
 
 const FriendList = () => {
   const navigate = useNavigate();
@@ -15,27 +19,29 @@ const FriendList = () => {
       <Header header="친구 목록" />
       <S.RequestButton onClick={() => navigate('request')}>
         <span>친구 요청</span>
-        <img src={RightIcon} alt="right" />
+        <img src={RIGHT_ICON} alt="right" />
       </S.RequestButton>
       <S.FriendLists>
         <S.FriendList>
-          <S.FriendListProfile></S.FriendListProfile>
+          <S.FriendListProfile
+            onClick={() => navigate('detail/0')}
+          ></S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton src={RemoveIcon} alt="remove-friend" />
+          <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
         </S.FriendList>
         <S.FriendList>
           <S.FriendListProfile></S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton src={RemoveIcon} alt="remove-friend" />
+          <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
         </S.FriendList>
         <S.FriendList>
           <S.FriendListProfile></S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton src={RemoveIcon} alt="remove-friend" />
+          <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
         </S.FriendList>
       </S.FriendLists>
-      <S.FixedButton>
-        <img src={AddIcon} alt="remove-friend" />
+      <S.FixedButton onClick={() => navigate('search')}>
+        <img src={ADD_ICON} alt="remove-friend" />
       </S.FixedButton>
     </S.FriendWrapper>
   );
