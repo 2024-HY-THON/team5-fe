@@ -7,6 +7,8 @@ const ROOM_ICON = '/assets/Common/room.svg';
 const COMMU_ICON = '/assets/Common/community.svg';
 const SETTINGS_ICON = '/assets/Common/settings.svg';
 
+const WRITE_BUTTON_ICON = '/assets/icons/write_icon.svg';
+
 export {
   MAIN_LOGO,
   STAR_CHARACTER,
@@ -15,4 +17,5 @@ export {
   ROOM_ICON,
   COMMU_ICON,
   SETTINGS_ICON,
+  WRITE_BUTTON_ICON,
 };
