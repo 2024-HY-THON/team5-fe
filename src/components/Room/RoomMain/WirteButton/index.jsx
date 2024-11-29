@@ -1,5 +1,5 @@
 import React from 'react';
-import { WRITE_BUTTON_ICON } from '../../../constants/Common/icon';
+import { WRITE_BUTTON_ICON } from '../../../../constants/Common/icon';
 
 const WriteButton = () => {
   const clickWrite = () => {

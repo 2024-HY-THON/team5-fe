@@ -1,9 +1,10 @@
 import React from 'react';
-import { CommonCard } from '../../../../styles/Common/common.style';
+import { CommonCard } from '../../../../../styles/Common/common.style';
 
-const LogCard = ({ background, tag, content, isBlank }) => {
+const LogCard = ({ background, tag, content, isBlank, ...props }) => {
   return (
     <CommonCard
+      onClick={props?.onClick}
       className="content-end"
       styles={{ 'border-radius': '20px', background }}
     >

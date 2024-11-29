@@ -1,7 +1,10 @@
 import React from 'react';
 import LogCard from './LogCard';
+import { useNavigate } from 'react-router-dom';
 
-const RankSection = () => {
+const MyLog = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col gap-y-[15px]">
       <h3 className="pl-[10px]">나의 별록</h3>
@@ -12,10 +15,10 @@ const RankSection = () => {
           background="#70c1ff"
         />
         <LogCard background="#a87ff3" />
-        <LogCard isBlank />
+        <LogCard isBlank onClick={() => navigate('/room/history')} />
       </div>
     </div>
   );
 };
 
-export default RankSection;
+export default MyLog;
