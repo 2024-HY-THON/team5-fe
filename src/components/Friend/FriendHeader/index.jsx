@@ -16,7 +16,7 @@ const Header = ({ header }) => {
         onClick={() => navigate(-1)}
       />
       <S.HeaderSpan>{header}</S.HeaderSpan>
-      <div></div>
+      <div style={{ width: '30px' }}></div>
     </S.HeaderWrapper>
   );
 };
