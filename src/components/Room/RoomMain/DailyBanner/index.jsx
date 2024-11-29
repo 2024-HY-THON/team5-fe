@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { HomeBanner, BannerContent } from '../../../styles/Home/home.style';
-import { STAR_YELLOW, ARROW_RIGHT } from '../../../constants/Common/icon';
+import { HomeBanner, BannerContent } from '../../../../styles/Home/home.style';
+import { STAR_YELLOW, ARROW_RIGHT } from '../../../../constants/Common/icon';
 
 const DailyBanner = () => {
   const navigate = useNavigate();
