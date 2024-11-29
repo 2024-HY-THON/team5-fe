@@ -1,10 +1,12 @@
 import React from 'react';
 // styled-components
 import * as S from '../../styles/Community/community.style';
+import Header from '../../components/Community/CommunityHeader';
 
 const Community = () => {
   return (
     <S.CommunityContainer>
+      <Header header={'피드'} />
       <S.CommunityContents>
         <S.CommunityCategoryBox>
           <S.CommunityCategory selected>실시간 별록</S.CommunityCategory>
@@ -26,18 +28,6 @@ const Community = () => {
           style={{ backgroundColor: '#65EE83' }}
         ></S.CommunityContent>
       </S.CommunityContents>
-      <S.CommunityContentLists>
-        <S.CommunityContentList>
-          <span>#산책</span>
-          <div>
-            내용내용내용
-            <br />
-            내용내용
-            <br />
-            내용내용내용
-          </div>
-        </S.CommunityContentList>
-      </S.CommunityContentLists>
     </S.CommunityContainer>
   );
 };

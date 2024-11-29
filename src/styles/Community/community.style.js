@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const CommunityContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
   width: 100%;
 
   background-color: #f2f2f2;
@@ -12,8 +11,6 @@ export const CommunityContainer = styled.div`
 export const CommunityCategoryBox = styled.div`
   display: flex;
   gap: 8px;
-
-  margin-top: 22px;
   margin-bottom: 10px;
   background-color: #fff;
 `;
