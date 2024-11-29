@@ -8,6 +8,7 @@ import { TO_ICON } from '../../../constants/Friend/icon';
 import BottomButton from '../../../components/Friend/BottomButton';
 import Modal from '../../../components/Friend/Modal';
 import { useNavigate } from 'react-router-dom';
+import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
 const FriendSearch = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,9 +21,9 @@ const FriendSearch = () => {
       <S.FriendSearchInput type="text" placeholder="닉네임 #숫자코드" />
       <S.FriendLists>
         <S.FriendList>
-          <S.FriendListProfile
-            onClick={() => navigate('/friend/detail/0')}
-          ></S.FriendListProfile>
+          <S.FriendListProfile onClick={() => navigate('/friend/detail/0')}>
+            <img src={BLUECHARACTER_ICON} alt="" />
+          </S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
           <S.FriendButton
             src={TO_ICON}

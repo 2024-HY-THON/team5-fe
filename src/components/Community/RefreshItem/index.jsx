@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import * as S from '../../../styles/Community/refreshItem.style';
-import { STAR_ICON } from '../../../constants/Community/icon';
+import {
+  STAR_ICON,
+  BLUECHARACTER_ICON,
+} from '../../../constants/Community/icon';
 import Modal from '../../../components/Friend/Modal';
 import Lottie from 'lottie-react';
 import Stamp from '../../../constants/Community/stamp.json';
@@ -64,7 +67,13 @@ const RefreshItem = () => {
           <S.ModalInner>
             <S.ModalTop>
               <S.ModalHeader>
-                <S.GrayCircle></S.GrayCircle>
+                <S.GrayCircle>
+                  <img
+                    src={BLUECHARACTER_ICON}
+                    alt=""
+                    style={{ width: '52px', height: '52px' }}
+                  />
+                </S.GrayCircle>
                 <S.ModalNameDate>
                   <S.ModalName>익명 별록</S.ModalName>
                   <S.ModalDate>2023.12.12</S.ModalDate>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import * as S from '../../../styles/Community/friendFeed.style';
-import { STAR_ICON } from '../../../constants/Community/icon';
+import {
+  STAR_ICON,
+  BLUECHARACTER_ICON,
+} from '../../../constants/Community/icon';
 import Stamp from '../../../constants/Community/stamp.json';
 import Lottie from 'lottie-react';
 import Modal from '../../Friend/Modal';
@@ -13,7 +16,9 @@ const FriendFeed = () => {
       <S.Content>
         <div style={{ display: 'flex', gap: '16px' }}>
           <S.Profile>
-            <S.GrayCircle></S.GrayCircle>
+            <S.GrayCircle>
+              <img src={BLUECHARACTER_ICON} alt="" />
+            </S.GrayCircle>
             <S.Nickname>닉네임</S.Nickname>
           </S.Profile>
           <div>
@@ -38,7 +43,13 @@ const FriendFeed = () => {
           <S.ModalInner>
             <S.ModalTop>
               <S.ModalHeader>
-                <S.GrayCircle></S.GrayCircle>
+                <S.GrayCircle>
+                  <img
+                    src={BLUECHARACTER_ICON}
+                    alt=""
+                    style={{ width: '52px', height: '52px' }}
+                  />
+                </S.GrayCircle>
                 <S.ModalNameDate>
                   <S.ModalName>익명 별록</S.ModalName>
                   <S.ModalDate>2023.12.12</S.ModalDate>

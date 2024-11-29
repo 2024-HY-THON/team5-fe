@@ -10,6 +10,7 @@ import {
   RIGHT_ICON,
   ADD_ICON,
 } from '../../../constants/Friend/icon';
+import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
 const FriendList = () => {
   const navigate = useNavigate();
@@ -23,19 +24,23 @@ const FriendList = () => {
       </S.RequestButton>
       <S.FriendLists>
         <S.FriendList>
-          <S.FriendListProfile
-            onClick={() => navigate('detail/0')}
-          ></S.FriendListProfile>
+          <S.FriendListProfile onClick={() => navigate('detail/0')}>
+            <img src={BLUECHARACTER_ICON} alt="" />
+          </S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
           <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
         </S.FriendList>
         <S.FriendList>
-          <S.FriendListProfile></S.FriendListProfile>
+          <S.FriendListProfile>
+            <img src={BLUECHARACTER_ICON} alt="" />
+          </S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
           <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
         </S.FriendList>
         <S.FriendList>
-          <S.FriendListProfile></S.FriendListProfile>
+          <S.FriendListProfile>
+            <img src={BLUECHARACTER_ICON} alt="" />
+          </S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
           <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
         </S.FriendList>
