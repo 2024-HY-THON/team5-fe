@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
-export const CommonWrapper = styled.div`
-  height: 100vh;
-  padding-bottom: 70px;
-  background-color: #ffffff;
-  padding: 16px 20px;
+export const BottomBox = styled.div`
+  width: 100%;
+  height: 104px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  margin-top: auto;
 `;
 
-export const CommonGreyBox = styled.div`
-  background: #d9d9d9;
-  border-radius: 27px;
-
+export const CommonCard = styled.div`
+  border-radius: ${(props) => props.styles?.['border-radius'] || '27px'};
+  background: ${(props) => props.styles?.background || '#d9d9d9'};
   width: ${(props) => props.styles?.width || '100%'};
   height: ${(props) => props.styles?.height || '171px'};
 `;
