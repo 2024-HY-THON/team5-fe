@@ -9,6 +9,7 @@ import LogDetail from './pages/Room/LogDetail';
 import LogUpdate from './pages/Room/LogUpdate';
 import LogHistory from './pages/Room/LogHistory';
 import MyRewards from './pages/Room/MyRewards';
+import ShareReward from './pages/Room/ShareReward';
 import Community from './pages/Community';
 import BottomNav from './components/Common/BottomNav';
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="update" element={<LogUpdate />} />
             <Route path="history" element={<LogHistory />} />
             <Route path="rewards" element={<MyRewards />} />
+            <Route path="shareReward" element={<ShareReward />} />
           </Route>
           <Route path="/community" element={<Community />} />
         </Routes>

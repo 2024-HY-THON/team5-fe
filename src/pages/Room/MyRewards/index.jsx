@@ -2,6 +2,7 @@ import React from 'react';
 import * as S from '../../../styles/Room/room.style';
 import FilterHeader from '../../../components/Room/LogHistory/FilterHeader';
 // import DateHistory from '../../../components/Room/MyRewards/DateHistory';
+import SpecialRewards from '../../../components/Room/MyRewards/SpecialRewards';
 
 const MyRewards = () => {
   // const dummyData = [
@@ -25,6 +26,7 @@ const MyRewards = () => {
       </S.RoomHeader>
       <S.RoomWrapper styles={{ bg: '#F2F2F2' }}>
         <FilterHeader />
+        <SpecialRewards />
         {/* {dummyData.map((data, index) => (
           <DateHistory key={index} data={data} />
         ))} */}
