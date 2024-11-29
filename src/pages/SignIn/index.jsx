@@ -95,8 +95,11 @@ const SignIn = () => {
       <Logo src="/assets/img/logo.svg" alt="별별 로고" />
       <StarImage src="/assets/img/yellowstar.svg" alt="Star" />
       <Title>반가워요!</Title>
-      <SubTitle>사용할 닉네임을</SubTitle>
-      <SubTitle>입력해 주세요</SubTitle>
+      <SubTitle>
+        사용할 닉네임을
+        <br />
+        입력해주세요
+      </SubTitle>
       <Input
         type="text"
         value={nickname}
@@ -116,7 +119,7 @@ const SignIn = () => {
                 checked={isChecked.all}
                 onChange={handleAllCheck}
               />
-              <Label>전체 동의</Label>
+              <Label style={{ fontWeight: 'bold' }}>전체 동의</Label>
               <br />
               <CheckBox
                 type="checkbox"
@@ -147,9 +150,7 @@ const SignIn = () => {
               </SmallText>
               <br />
             </CheckContainer>
-            <Button2 onClick={handleAgree} style={{ marginLeft: '10%' }}>
-              동의하기
-            </Button2>
+            <Button2 onClick={handleAgree}>동의하기</Button2>
             {message && <Message>{message}</Message>}
           </AgreementContainer>
         </Overlay>

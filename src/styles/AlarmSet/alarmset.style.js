@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const Logo = styled.img`
   width: 83px;
   height: 34px;
-  margin-top: 20px;
+  margin-top: 55px;
   margin-bottom: 100px;
 `;
 
@@ -85,12 +85,12 @@ export const ConfirmButton = styled.button`
   background-color: #ffc655;
   color: white;
   border: none;
-  border-radius: 40px;
-  width: 90%;
-  padding: 12px 25px;
+  border-radius: 30px;
+  padding: 12px 25px; /* 패딩 조정 */
   font-size: 16px;
   cursor: pointer;
-  margin-top: 150px;
+  width: 100%; /* 버튼을 전체 너비로 설정 */
+  margin-top: 100px;
 
   &:hover {
     background-color: #ffa726;

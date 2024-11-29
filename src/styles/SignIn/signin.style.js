@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   background-color: #ffffff;
+  font-family: 'Pretendard', sans-serif;
 `;
 
 export const Overlay = styled.div`
@@ -30,50 +31,57 @@ export const AgreementContainer = styled.div`
   height: 408px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
+  align-items: center;
 `;
 
 export const Logo = styled.img`
   width: 83px;
   height: 34px;
-  transform: translateY(-50px);
+  transform: translateY(-25px);
 `;
 
 export const StarImage = styled.img`
   width: 117px;
   height: 116px;
-  margin-top: 40px;
+  margin-top: 90px;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.h1`
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
   margin: 6px 0;
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 18px;
+  font-size: 24px;
   color: #666666;
   margin: 0;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 20px;
 `;
 
 export const Input = styled.input`
-  width: 80%;
-  padding: 15px;
+  width: 345px;
+  height: 65px;
+  padding: 20px;
   margin: 16px 0;
-  border: 1px solid #cccccc;
-  border-radius: 40px; /* 더 동그랗게 */
-  font-size: 15px;
-  background-color: #f0f0f0; /* 회색 배경 */
+  margin-top: 40px;
+  border-radius: 50px;
+  font-size: 20px;
+  background-color: #f2f2f2;
 `;
 
 export const Button1 = styled.button`
-  width: 80%;
+  width: 90%;
+  height: 60px;
   padding: 12px;
   margin-top: 100px;
   background-color: #ffc655;
   color: #ffffff;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
 
@@ -83,33 +91,35 @@ export const Button1 = styled.button`
 `;
 
 export const Button2 = styled.button`
-  width: 80%;
-  padding: 12px;
-  background-color: #ffcc00;
+  width: 100%;
+  padding: 20px;
+  background-color: #1f1f1f;
   color: #ffffff;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 5%;
+  margin: 0px auto;
 
   &:hover {
     background-color: #e6b800;
   }
+  align-self: center;
 `;
 
 export const CheckContainer = styled.div`
   background-color: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 5px;
   width: 100%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 `;
 
 export const CheckBox = styled.input`
   appearance: none;
-  width: 24px;
-  height: 24px;
+  top: 10px;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 2px solid #cccccc;
   position: relative;
@@ -136,10 +146,11 @@ export const CheckBox = styled.input`
 export const Label = styled.label`
   font-size: 16px;
   color: #333;
+  margin-left: 5px;
 `;
 
 export const Message = styled.div`
-  margin-top: 10px; /* 버튼과 메시지 사이의 여백 */
+  margin-top: 10px;
   color: green;
   font-size: 16px;
   text-align: center;

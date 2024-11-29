@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Logo = styled.img`
   width: 83px;
   height: 34px;
-  transform: translateY(-60px);
+  transform: translateY(-45px);
   margin-bottom: 50px;
 `;
 
@@ -37,13 +37,14 @@ export const ProfileOption = styled.div`
   border-radius: 50%;
   overflow: hidden;
   transition: border 0.3s;
+  background-color: #f2f2f2;
   width: 120px;
   height: 120px; /* 프로필 옵션 크기 조정 */
   margin: 10px;
   border: 2px solid transparent;
 
   &.selected {
-    border: 2px solid #ffd700;
+    border: 4px solid #ffd700;
   }
 `;
 
@@ -56,8 +57,8 @@ export const UseProfileButton = styled.button`
   background-color: #ffc655;
   color: white;
   border: none;
-  border-radius: 30px;
-  padding: 12px 25px; /* 패딩 조정 */
+  border-radius: 50px;
+  padding: 16px 40px; /* 패딩 조정 */
   font-size: 16px;
   cursor: pointer;
   width: 90%; /* 버튼을 전체 너비로 설정 */

@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Logo = styled.img`
   width: 83px;
   height: 34px;
-  transform: translateY(-30px);
+  transform: translateY(-70px);
   margin-bottom: 50px;
 `;
 
@@ -49,9 +49,9 @@ export const GoToProfileButton = styled.button`
   background-color: #ff6b6b;
   color: white;
   border: none;
-  margin-top: 70px;
+  margin-top: 90px;
   border-radius: 50px;
-  width: 80%;
+  width: 90%;
   cursor: pointer;
   font-size: 16px;
 
