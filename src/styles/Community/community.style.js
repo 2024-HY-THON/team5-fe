@@ -3,17 +3,17 @@ import styled from 'styled-components';
 export const CommunityContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
   width: 100%;
 
   background-color: #f2f2f2;
+
+  height: fit-content;
+  overflow-y: auto;
 `;
 
 export const CommunityCategoryBox = styled.div`
   display: flex;
   gap: 8px;
-
-  margin-top: 22px;
   margin-bottom: 10px;
   background-color: #fff;
 `;
@@ -55,7 +55,7 @@ export const CommunityContentHeader = styled.span`
 `;
 
 export const CommunityContent = styled.div`
-  height: 92px;
+  height: 110px;
   border-radius: 27px;
 
   padding: 20px 14px;
@@ -68,13 +68,18 @@ export const CommunityContent = styled.div`
     width: 47px;
     height: 44px;
   }
-
   & > div {
+    display: flex;
+    gap: 10px;
+  }
+
+  & > div > div {
     width: 160px;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2px;
+    margin-left: auto;
   }
 
   & > button {

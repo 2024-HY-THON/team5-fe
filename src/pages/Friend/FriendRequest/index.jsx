@@ -10,6 +10,7 @@ import {
   CANCEL_ICON,
   ADD_ICON,
 } from '../../../constants/Friend/icon';
+import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
 const FriendRequest = () => {
   const navigate = useNavigate();
@@ -18,9 +19,9 @@ const FriendRequest = () => {
       <Header header="친구 요청" />
       <S.FriendLists>
         <S.FriendList>
-          <S.FriendListProfile
-            onClick={() => navigate('/friend/detail/0')}
-          ></S.FriendListProfile>
+          <S.FriendListProfile onClick={() => navigate('/friend/detail/0')}>
+            <img src={BLUECHARACTER_ICON} alt="" />
+          </S.FriendListProfile>
           <S.FriendListNickname>닉네임</S.FriendListNickname>
           <S.FriendRequests>
             <S.FriendButton src={ACCEPT_ICON} alt="accept-friend" />

@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import * as S from '../../../styles/Friend/friendDetail.style';
 // assets
 import { EXIT_ICON, MEDAL_ICON } from '../../../constants/Friend/icon';
+import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
+
 const FriendDetail = () => {
   const navigate = useNavigate();
   return (
@@ -18,10 +20,13 @@ const FriendDetail = () => {
         <br />
         님의 프로필
       </S.FriendDetailText>
-      <S.FriendDetailGrayCircle
-        width={172}
-        height={172}
-      ></S.FriendDetailGrayCircle>
+      <S.FriendDetailGrayCircle width={172} height={172}>
+        <img
+          src={BLUECHARACTER_ICON}
+          alt=""
+          style={{ width: '160px', height: '160px' }}
+        />
+      </S.FriendDetailGrayCircle>
       <S.FriendDetailGrade>
         <S.FriendDetailGrayCircle width={56} height={56}>
           <img
