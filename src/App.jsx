@@ -18,6 +18,10 @@ import MyRewards from './pages/Room/MyRewards';
 import ShareReward from './pages/Room/ShareReward';
 import CreateLog from './pages/Room/CreateLog';
 import Community from './pages/Community';
+import SignIn from './pages/SignIn';
+import Profile from './pages/Profile';
+import AlarmSet from './pages/AlarmSet';
+import SignUp from './pages/SignUp';
 import BottomNav from './components/Common/BottomNav';
 import FriendList from './pages/Friend/FriendList';
 import FriendRequest from './pages/Friend/FriendRequest';
@@ -36,7 +40,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/room" element={<Room />}>
+            <Route path="/signin" element={<SignIn />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/alarmset" element={<AlarmSet />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/room" element={<Room />}>
               <Route index element={<RoomMain />} />
               <Route path="detail" element={<LogDetail />} />
               <Route path="update" element={<LogUpdate />} />
