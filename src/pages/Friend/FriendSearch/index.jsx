@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // styled-components
 import * as S from '../../../styles/Friend/friendSearch.style';
 // components
@@ -9,27 +9,55 @@ import BottomButton from '../../../components/Friend/BottomButton';
 import Modal from '../../../components/Friend/Modal';
 import { useNavigate } from 'react-router-dom';
 
+export const Dummy = [
+  { profile: 0, nickname: '철수' },
+  { profile: 1, nickname: '영희' },
+  { profile: 2, nickname: '훈이' },
+];
+
 const FriendSearch = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [search, setSearch] = useState('');
+  const [filteredFriends, setFilteredFriends] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (search) {
+      const filtered = Dummy.filter(
+        (friend) => friend.nickname.includes(search) // 닉네임에 search가 포함되어 있는지 확인
+      );
+      setFilteredFriends(filtered);
+    } else {
+      setFilteredFriends([]); // 검색어가 없으면 전체 목록으로 복원
+    }
+  }, [search]);
 
   return (
     <S.FriendSearchWrapper>
       <Header header={'친구 추가'} />
       <S.FriendSearchText>검색할 닉네임을 입력하세요</S.FriendSearchText>
-      <S.FriendSearchInput type="text" placeholder="닉네임 #숫자코드" />
+      <S.FriendSearchInput
+        type="text"
+        placeholder="닉네임 #숫자코드"
+        onChange={(e) => setSearch(e.target.value)}
+        value={search}
+      />
       <S.FriendLists>
-        <S.FriendList>
-          <S.FriendListProfile
-            onClick={() => navigate('/friend/detail/0')}
-          ></S.FriendListProfile>
-          <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton
-            src={TO_ICON}
-            alt="to-friend"
-            onClick={() => setIsModalOpen(true)}
-          />
-        </S.FriendList>
+        {filteredFriends.map((item, index) => {
+          return (
+            <S.FriendList key={index}>
+              <S.FriendListProfile
+                onClick={() => navigate('/friend/detail/0')}
+              ></S.FriendListProfile>
+              <S.FriendListNickname>{item.nickname}</S.FriendListNickname>
+              <S.FriendButton
+                src={TO_ICON}
+                alt="to-friend"
+                onClick={() => setIsModalOpen(true)}
+              />
+            </S.FriendList>
+          );
+        })}
       </S.FriendLists>
       <BottomButton text={'완료'} color={'#FFC655'} />
       <Modal width={345} isOpen={isModalOpen}>
