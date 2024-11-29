@@ -11,7 +11,7 @@ export const BottomBox = styled.div`
 `;
 
 export const CommonCard = styled.div`
-  border-radius: ${(props) => props.styles?.['border-radius'] || '27px'};
+  border-radius: ${(props) => props.styles?.['border-radius'] || '20px'};
   background: ${(props) => props.styles?.background || '#d9d9d9'};
   width: ${(props) => props.styles?.width || '100%'};
   height: ${(props) => props.styles?.height || '171px'};
