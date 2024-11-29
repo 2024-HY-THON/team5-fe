@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import { TAG_LIST } from '../../../../constants/Room/tags';
 import { Tag } from '../../../../styles/Room/logUpdate.style';
+import axios from 'axios';
 
 const TagSection = ({ create }) => {
   const [selectTag, setSelectTag] = useState(null);
@@ -14,17 +15,59 @@ const TagSection = ({ create }) => {
 
   // const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const submitData = {
-      tags: selectTag === 'personal' ? personalTag : selectTag,
-      content,
-    };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const submitData = {
+  //     tags: selectTag === 'personal' ? personalTag : selectTag,
+  //     content,
+  //   };
+  //
+  //   console.log('submitData???', submitData);
+  //   create({ body: submitData });
+  //   // navigate('../detail');
+  // };
 
-    console.log('submitData???', submitData);
-    create({ body: submitData });
-    // navigate('../detail');
+  const apiClient = axios.create({
+    baseURL: 'http://localhost:8080', // 백엔드 API URL
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+    withCredentials: true, // 쿠키 포함
+  });
+
+
+  const postReward = async ({body}) => {
+    try {
+      const response = await apiClient.post('/award/saved', body); // 백엔드 API 호출
+      console.log('award saved, token:', response?.data); // 응답 데이터 확인
+      return response.data; // 데이터 반환
+    } catch (error) {
+      console.error('Error during social login API call:', error); // 에러 로그
+      throw error;
+    }
   };
+
+  const binaryData = new Uint8Array([
+    0x52, 0x49, 0x46, 0x46, 0xe8, 0x1e, 0x00, 0x00, 0x57, 0x45, 0x42, 0x50, // ... (바이너리 데이터)
+  ]);
+
+  const blob = new Blob([binaryData], { type: 'image/jpeg' });
+
+  const formData = new FormData();
+  formData.append('awardImage', blob, 'CAT.jpg');
+  formData.append('title', 'test');
+  formData.append('email', 'test@test.com');
+
+  const handleSubmit = async (event) => {
+      try {
+        const token = await postReward({body: formData});
+        console.log('Access token received:', token); // 토큰 확인
+        return token;
+      } catch (error) {
+        console.error('Error during token fetch:', error); // 에러 로그
+      }
+  };
+
 
   return (
     <form className="w-full flex flex-col gap-[20px]" onSubmit={handleSubmit}>
@@ -71,8 +114,9 @@ const TagSection = ({ create }) => {
         />
       </div>
       <button
-        type="submit"
+        type="button"
         className="w-full h-[60px] rounded-[50px] bg-[#ffc655] flex items-center justify-center text-white"
+        onClick={handleSubmit}
       >
         <p>상장 만들러가기</p>
       </button>

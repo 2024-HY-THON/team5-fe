@@ -18,48 +18,7 @@ const Login = () => {
   };
 
   // 네이버 소셜 로그인 API 호출 함수
-  // const socialLogin = async () => {
-  //   try {
-  //     const response = await axios.get(`${apiUrl}/login`);
-  //     // const response = await axios.post(
-  //     //   `${apiUrl}/ouath2/authorization/${provider}`,
-  //     //   data
-  //     // );
-  //     console.log('login success token:', response?.data);
-  //     return response.data;
-  //   } catch (error) {
-  //     console.error('소셜 로그인 API 호출 중 오류 발생:', error);
-  //     throw error;
-  //   }
-  // };
 
-  // 페이지 로드 시 네이버 소셜 로그인 처리
-  // useEffect(() => {
-  // const clickLogin = () => {
-  //   const urlParams = new URLSearchParams(window.location.search);
-  //   const code = urlParams.get('code');
-  //   const state = urlParams.get('state');
-
-  //   if (code && state) {
-  //     const handleSocialLogin = async () => {
-  //       try {
-  //         const socialResponse = await socialLogin('naver', { code, state });
-  //         if (socialResponse.token) {
-  //           localStorage.setItem('jwtToken', socialResponse.token);
-  //           // 비밀번호 설정 페이지로 리디렉션, 소셜 사용자 여부 전달
-  //           navigate('/home', {
-  //             state: { title: '비밀번호 설정', isSocialUser: true },
-  //           });
-  //         }
-  //       } catch (error) {
-  //         console.error('소셜 로그인 처리 중 오류 발생:', error);
-  //       }
-  //     };
-
-  //     handleSocialLogin();
-  //   }
-  // };
-  // }, [navigate]); // navigate를 의존성 배열에 추가
 
   return (
     <PageContainer>
