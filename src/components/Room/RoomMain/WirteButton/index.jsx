@@ -1,9 +1,11 @@
 import React from 'react';
-import { WRITE_BUTTON_ICON } from '../../../constants/Common/icon';
+import { useNavigate } from 'react-router-dom';
+import { WRITE_BUTTON_ICON } from '../../../../constants/Common/icon';
 
 const WriteButton = () => {
+  const navigate = useNavigate();
   const clickWrite = () => {
-    console.log('click button!');
+    navigate('/room/createLog');
   };
   return (
     <button
