@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-export const CommonWrapper = styled.div`
-  height: fit-content;
-  background-color: #ffffff;
-  padding: 16px 20px 104px 20px;
+export const BottomBox = styled.div`
+  width: 100%;
+  height: 104px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  margin-top: auto;
 `;
 
 export const CommonCard = styled.div`

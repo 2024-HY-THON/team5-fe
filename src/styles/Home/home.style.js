@@ -1,19 +1,24 @@
 import styled from 'styled-components';
+import { screenPadding } from '../../constants/Common/styles';
 
 export const HomeWrapper = styled.body`
-  height: fit-content;
+  overflow-y: auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 100%;
+  height: fit-content;
+  padding: ${screenPadding};
 `;
 
 export const HomeHeader = styled.header`
+  width: 100%;
+  height: 50px;
   background-color: #fff;
-  min-height: 50px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: left;
 `;
