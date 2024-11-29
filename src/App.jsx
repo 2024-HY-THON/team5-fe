@@ -41,10 +41,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<SignIn />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/alarmset" element={<AlarmSet />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/room" element={<Room />}>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/alarmset" element={<AlarmSet />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/room" element={<Room />}>
               <Route index element={<RoomMain />} />
               <Route path="detail" element={<LogDetail />} />
               <Route path="update" element={<LogUpdate />} />
