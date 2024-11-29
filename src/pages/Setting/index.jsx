@@ -4,17 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import * as S from '../../styles/Setting/setting.style';
 // assets
 import { MEDAL_ICON } from '../../constants/Friend/icon';
+import { BLUECHARACTER_ICON } from '../../constants/Community/icon';
 
 const Setting = () => {
   const navigate = useNavigate();
   return (
     <S.SettingWrapper>
       <S.Header>환경설정</S.Header>
-      <S.GrayCircle
-        width={112}
-        height={112}
-        style={{ marginTop: '16px' }}
-      ></S.GrayCircle>
+      <S.GrayCircle width={112} height={112} style={{ marginTop: '16px' }}>
+        <img
+          src={BLUECHARACTER_ICON}
+          alt=""
+          style={{ width: '100px', height: '100px' }}
+        />
+      </S.GrayCircle>
       <S.NickName>닉네임</S.NickName>
       <S.EditButton onClick={() => navigate('profile')}>
         프로필 수정
