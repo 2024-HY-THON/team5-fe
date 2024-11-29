@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
 import * as S from '../../../styles/Friend/friend.style';
@@ -10,9 +10,18 @@ import {
   RIGHT_ICON,
   ADD_ICON,
 } from '../../../constants/Friend/icon';
+import { getFriends } from '../../../services/Friend/friend';
 
 const FriendList = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const getFriendsData = async () => {
+      const response = await getFriends();
+      return response;
+    };
+    getFriendsData();
+  }, []);
 
   return (
     <S.FriendWrapper>
