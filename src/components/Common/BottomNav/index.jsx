@@ -8,6 +8,7 @@ const BottomNav = () => {
   const location = useLocation();
   const hiddenPaths = [
     '/room/update',
+    '/room/shareReward',
     'signin',
     'login',
     'profile',
