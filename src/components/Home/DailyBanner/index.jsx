@@ -1,6 +1,6 @@
 import React from 'react';
 import { HomeBanner, BannerContent } from '../../../styles/Home/home.style';
-import { STAR_CHARACTER, ARROW_RIGHT } from '../../../constants/Common/icon';
+import { STAR_YELLOW, ARROW_RIGHT } from '../../../constants/Common/icon';
 
 const DailyBanner = () => {
   return (
@@ -8,7 +8,7 @@ const DailyBanner = () => {
       <BannerContent>
         <div className="flex gap-x-[10px] justify-center items-center">
           <img
-            src={STAR_CHARACTER}
+            src={STAR_YELLOW}
             alt="logo"
             style={{ width: '47px', height: '44px' }}
           />
