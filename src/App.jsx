@@ -15,6 +15,8 @@ import FriendList from './pages/Friend/FriendList';
 import FriendRequest from './pages/Friend/FriendRequest';
 import FriendSearch from './pages/Friend/FriendSearch';
 import FriendDetail from './pages/Friend/FriendDetail';
+import Setting from './pages/Setting';
+import SettingProfile from './pages/Setting/SettingProfile';
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
             <Route path="request" element={<FriendRequest />} />
             <Route path="search" element={<FriendSearch />} />
             <Route path="detail/:id" element={<FriendDetail />} />
+          </Route>
+          <Route path="/settings" element={<Outlet />}>
+            <Route index element={<Setting />} />
+            <Route path="profile" element={<SettingProfile />} />
           </Route>
         </Routes>
         <BottomNav />
