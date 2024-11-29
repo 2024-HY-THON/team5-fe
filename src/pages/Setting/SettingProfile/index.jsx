@@ -3,16 +3,20 @@ import { useState } from 'react';
 // styled-components
 import * as S from '../../../styles/Setting/settingProfile.style';
 // components
-import Header from '../../../components/Friend/FriendHeader';
+import Header from '../../../components/Setting/SettingHeader';
 // assets
 import { CHECKBOX_ICON, CHANGE_ICON } from '../../../constants/Setting/icon';
 
 const SettingProfile = () => {
   const [isChangeImage, setIsChangeImage] = useState(false);
+
   return (
     <S.SettingProfileWrapper>
       <S.HeaderWrapper>
-        <Header header="프로필 수정" />
+        <Header
+          header="프로필 수정"
+          onClickFunc={isChangeImage === true ? setIsChangeImage : undefined}
+        />
       </S.HeaderWrapper>
       {!isChangeImage ? (
         <S.InnerWrapper>
