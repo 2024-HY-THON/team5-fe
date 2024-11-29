@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0px 20px;
+  padding: 32px 20px;
   height: 86px;
   background-color: #fff;
 `;
