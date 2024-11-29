@@ -44,6 +44,7 @@ const SignIn = () => {
       return;
     }
     console.log('사용할 닉네임:', nickname);
+    localStorage.setItem('nickname', nickname);
     setAgreementVisible(true);
   };
 
