@@ -1,4 +1,5 @@
 import React from 'react';
+// styled-components
 import * as S from '../../styles/Community/community.style';
 
 const Community = () => {
