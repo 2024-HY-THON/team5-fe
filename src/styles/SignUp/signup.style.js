@@ -46,5 +46,3 @@ export const GoToProfileButton = styled.button`
     background-color: #ff4c4c;
   }
 `;
-
-

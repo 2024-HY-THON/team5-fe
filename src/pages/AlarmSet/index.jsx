@@ -10,10 +10,10 @@ import {
   CheckBox,
   Description,
   OptionsContainer,
-} from '../../styles/AlarmSet/alarmset.style'; // 스타일 파일 경로
+} from '../../styles/AlarmSet/alarmset.style';
 
 const AlarmSet = () => {
-  const navigate = useNavigate(); // useNavigate 훅 사용
+  const navigate = useNavigate();
 
   // 체크박스 상태 관리
   const [notifications, setNotifications] = useState({
@@ -34,7 +34,17 @@ const AlarmSet = () => {
         friendProfile: checked,
       });
     } else {
-      setNotifications({ ...notifications, [name]: checked });
+      setNotifications((prev) => {
+        const newState = { ...prev, [name]: checked };
+
+        // 모든 개별 체크박스가 선택되면 "모든 알림 받기" 체크
+        newState.all =
+          newState.myProfile &&
+          newState.dailyQuestion &&
+          newState.friendProfile;
+
+        return newState;
+      });
     }
   };
 
@@ -45,7 +55,7 @@ const AlarmSet = () => {
 
   return (
     <Container>
-      <Logo src="/assets/icon/logo.svg" alt="별별 로고" />
+      <Logo src="/assets/img/logo.svg" alt="별별 로고" />
       <Title>알림을 보내드릴게요</Title>
       <OptionsContainer>
         <Option>

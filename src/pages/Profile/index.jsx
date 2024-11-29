@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -11,24 +11,27 @@ import {
 } from '../../styles/Profile/profile.style';
 
 const Profile = () => {
-  const [selectedProfile, setSelectedProfile] = useState(null);
+  const [selectedProfile, setSelectedProfile] = useState(1);
   const navigate = useNavigate();
 
   const profiles = [
-    { id: 1, src: '/assets/icons/star.svg' },
-    { id: 2, src: '/assets/icons/bluestar.svg' },
-    { id: 3, src: '/assets/icons/redstar.svg' },
-    { id: 4, src: '/assets/icons/purplestar.svg' },
+    { id: 1, src: '/assets/img/yellowstar.svg' },
+    { id: 2, src: '/assets/img/bluestar.svg' },
+    { id: 3, src: '/assets/img/redstar.svg' },
+    { id: 4, src: '/assets/img/purplestar.svg' },
   ];
 
+  useEffect(() => {
+    setSelectedProfile(1);
+  }, []);
+
   const handleProfileSelect = (id) => {
-    setSelectedProfile(id); // 프로필 선택
+    setSelectedProfile(id);
   };
 
   const handleUseProfile = () => {
     if (selectedProfile) {
       localStorage.setItem('selectedProfile', selectedProfile);
-      console.log('선택한 프로필 ID:', selectedProfile);
       navigate('/alarmset');
     } else {
       alert('프로필을 선택해 주세요.');
@@ -37,14 +40,14 @@ const Profile = () => {
 
   return (
     <Container>
-      <Logo src="/assets/icon/logo.svg" alt="별별 로고" />
+      <Logo src="/assets/img/logo.svg" alt="별별 로고" />
       <Title>마음에 드는</Title>
       <Title>프로필을 선택하세요</Title>
       <ProfileContainer>
         {profiles.map((profile) => (
           <ProfileOption
             key={profile.id}
-            onClick={() => handleProfileSelect(profile.id)} // 프로필 선택
+            onClick={() => handleProfileSelect(profile.id)}
             className={selectedProfile === profile.id ? 'selected' : ''}
           >
             <ProfileImage src={profile.src} alt={`Profile ${profile.id}`} />

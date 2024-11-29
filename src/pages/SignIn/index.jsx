@@ -49,11 +49,25 @@ const SignIn = () => {
 
   const handleCheck = (e) => {
     const { name } = e.target;
-    setIsChecked((prev) => ({
-      ...prev,
-      [name]: !prev[name],
-      all: false,
-    }));
+    setIsChecked((prev) => {
+      const newCheckedState = {
+        ...prev,
+        [name]: !prev[name],
+        all: false, // 전체 동의는 해제
+      };
+
+      if (
+        newCheckedState.terms &&
+        newCheckedState.privacy &&
+        newCheckedState.email
+      ) {
+        newCheckedState.all = true;
+      } else {
+        newCheckedState.all = false;
+      }
+
+      return newCheckedState;
+    });
   };
 
   const handleAllCheck = () => {
@@ -67,19 +81,18 @@ const SignIn = () => {
   };
 
   const handleAgree = () => {
-    // 체크박스 중 하나라도 선택되었는지 확인
     if (isChecked.terms || isChecked.privacy || isChecked.email) {
       setMessage('동의가 완료되었습니다!');
       navigate('/profile');
     } else {
-      setMessage('최소 하나의 동의 항목을 선택해야 합니다.'); // 선택하지 않았을 때 메시지
+      setMessage('최소 하나의 동의 항목을 선택해야 합니다.');
     }
   };
 
   return (
     <Container>
-      <Logo src="/assets/icon/logo.svg" alt="별별 로고" />
-      <StarImage src="/assets/icon/star.svg" alt="Star" />
+      <Logo src="/assets/img/logo.svg" alt="별별 로고" />
+      <StarImage src="/assets/img/yellowstar.svg" alt="Star" />
       <Title>반가워요!</Title>
       <SubTitle>사용할 닉네임을</SubTitle>
       <SubTitle>입력해 주세요</SubTitle>
@@ -136,7 +149,7 @@ const SignIn = () => {
             <Button2 onClick={handleAgree} style={{ marginLeft: '10%' }}>
               동의하기
             </Button2>
-            {message && <Message>{message}</Message>} {/* 메시지 표시 */}
+            {message && <Message>{message}</Message>}
           </AgreementContainer>
         </Overlay>
       )}
