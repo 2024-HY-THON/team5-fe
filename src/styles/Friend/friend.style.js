@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const FriendWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 16px 20px;
+  height: fit-content;
+  overflow-y: auto;
 `;
 
 export const RequestButton = styled.button`
