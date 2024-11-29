@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Room from './pages/Room';
 import Community from './pages/Community';
 import BottomNav from './components/Common/BottomNav';
 import FriendList from './pages/Friend/FriendList';
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/room" element={<Room />} />
           <Route path="/community" element={<Community />} />
           <Route path="/friend" element={<Outlet />}>
             <Route index element={<FriendList />} />
