@@ -46,7 +46,7 @@ const FriendList = () => {
             <S.FriendListProfile onClick={() => navigate(`detail/${name.id}`)}>
               <img src={BLUECHARACTER_ICON} alt="" />
             </S.FriendListProfile>
-            <S.FriendListNickname>{name.name}</S.FriendListNickname>
+            <S.FriendListNickname>{`${name.name} #000${name.id}`}</S.FriendListNickname>
             <S.FriendButton
               src={REMOVE_ICON}
               alt="remove-friend"

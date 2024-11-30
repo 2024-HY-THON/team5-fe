@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
 import * as S from '../../styles/Setting/setting.style';
