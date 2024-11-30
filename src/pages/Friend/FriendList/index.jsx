@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
 import * as S from '../../../styles/Friend/friend.style';
@@ -14,7 +14,15 @@ import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
 const FriendList = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState([
+    { name: '철수', id: 5 },
+    { name: '영희', id: 6 },
+    { name: '훈이', id: 7 },
+  ]);
 
+  const removeIndex = (idx) => {
+    setData(data.filter((_, index) => index !== idx));
+  };
   return (
     <S.FriendWrapper>
       <Header header="친구 목록" />
@@ -23,27 +31,19 @@ const FriendList = () => {
         <img src={RIGHT_ICON} alt="right" />
       </S.RequestButton>
       <S.FriendLists>
-        <S.FriendList>
-          <S.FriendListProfile onClick={() => navigate('detail/0')}>
-            <img src={BLUECHARACTER_ICON} alt="" />
-          </S.FriendListProfile>
-          <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
-        </S.FriendList>
-        <S.FriendList>
-          <S.FriendListProfile>
-            <img src={BLUECHARACTER_ICON} alt="" />
-          </S.FriendListProfile>
-          <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
-        </S.FriendList>
-        <S.FriendList>
-          <S.FriendListProfile>
-            <img src={BLUECHARACTER_ICON} alt="" />
-          </S.FriendListProfile>
-          <S.FriendListNickname>닉네임</S.FriendListNickname>
-          <S.FriendButton src={REMOVE_ICON} alt="remove-friend" />
-        </S.FriendList>
+        {data.map((name, idx) => (
+          <S.FriendList key={idx}>
+            <S.FriendListProfile onClick={() => navigate(`detail/${name.id}`)}>
+              <img src={BLUECHARACTER_ICON} alt="" />
+            </S.FriendListProfile>
+            <S.FriendListNickname>{name.name}</S.FriendListNickname>
+            <S.FriendButton
+              src={REMOVE_ICON}
+              alt="remove-friend"
+              onClick={() => removeIndex(idx)}
+            />
+          </S.FriendList>
+        ))}
       </S.FriendLists>
       <S.FixedButton onClick={() => navigate('search')}>
         <img src={ADD_ICON} alt="remove-friend" />

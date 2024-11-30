@@ -14,8 +14,8 @@ const RealTime = () => {
           <div>
             <img src={CHARACTER_ICON} alt="character" />
             <div>
-              <S.CommunityContentTitle>#제목</S.CommunityContentTitle>
-              <S.CommunityContentText>내용내용내용</S.CommunityContentText>
+              <S.CommunityContentTitle>#내일</S.CommunityContentTitle>
+              <S.CommunityContentText>해커톤이 열린다</S.CommunityContentText>
             </div>
           </div>
           <button style={{ display: 'flex', gap: '5px' }}>
@@ -24,7 +24,7 @@ const RealTime = () => {
               alt="star"
               style={{ width: '20px', height: '20px' }}
             />
-            <span>12개</span>
+            <span>13개</span>
           </button>
         </S.CommunityContent>
         <S.CommunityContent
@@ -33,8 +33,10 @@ const RealTime = () => {
           <div>
             <img src={CHARACTER_ICON} alt="character" />
             <div>
-              <S.CommunityContentTitle>#제목</S.CommunityContentTitle>
-              <S.CommunityContentText>내용내용내용</S.CommunityContentText>
+              <S.CommunityContentTitle>#낮잠</S.CommunityContentTitle>
+              <S.CommunityContentText>
+                낮잠만 4시간을 자버림
+              </S.CommunityContentText>
             </div>
           </div>
           <button style={{ display: 'flex', gap: '5px' }}>

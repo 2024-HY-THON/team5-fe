@@ -1,12 +1,24 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 // styled-components
 import * as S from '../../../styles/Friend/friendDetail.style';
 // assets
 import { EXIT_ICON, MEDAL_ICON } from '../../../constants/Friend/icon';
 import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
+const Dummy = [
+  { name: '미희', id: 0 },
+  { name: '영미', id: 1 },
+  { name: '준수', id: 2 },
+  { name: '경수', id: 3 },
+  { name: '지미', id: 4 },
+  { name: '철수', id: 5 },
+  { name: '영희', id: 6 },
+  { name: '훈이', id: 7 },
+];
+
 const FriendDetail = () => {
+  const params = useParams();
   const navigate = useNavigate();
   return (
     <S.FriendDetailWrapper>
@@ -16,7 +28,7 @@ const FriendDetail = () => {
         onClick={() => navigate(-1)}
       />
       <S.FriendDetailText>
-        닉네임OO #0000
+        {`${Dummy[params.id].name} #000${params.id}`}
         <br />
         님의 프로필
       </S.FriendDetailText>
