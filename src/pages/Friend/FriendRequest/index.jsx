@@ -38,7 +38,7 @@ const FriendRequest = () => {
           <S.FriendListProfile onClick={() => navigate('/friend/detail/0')}>
             <img src={BLUECHARACTER_ICON} alt="" />
           </S.FriendListProfile>
-          <S.FriendListNickname>짱구</S.FriendListNickname>
+          <S.FriendListNickname>짱구 #0010</S.FriendListNickname>
           <S.FriendRequests onClick={() => fetchFriendRequests()}>
             <S.FriendButton src={ACCEPT_ICON} alt="accept-friend" />
             <S.FriendButton src={CANCEL_ICON} alt="cancel-friend" />

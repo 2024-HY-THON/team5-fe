@@ -61,7 +61,7 @@ const FriendSearch = () => {
             >
               <img src={BLUECHARACTER_ICON} alt="" />
             </S.FriendListProfile>
-            <S.FriendListNickname>{dat.name}</S.FriendListNickname>
+            <S.FriendListNickname>{`${dat.name} #000${dat.id}`}</S.FriendListNickname>
             <S.FriendButton
               src={TO_ICON}
               alt="to-friend"
@@ -70,7 +70,11 @@ const FriendSearch = () => {
           </S.FriendList>
         ))}
       </S.FriendLists>
-      <BottomButton text={'완료'} color={'#FFC655'} />
+      <BottomButton
+        text={'완료'}
+        color={'#FFC655'}
+        onClick={() => navigate(-1)}
+      />
       <Modal width={345} isOpen={isModalOpen}>
         <S.ModalInner>
           <S.ModalUser>
