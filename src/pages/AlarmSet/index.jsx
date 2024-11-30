@@ -15,7 +15,6 @@ import {
 const AlarmSet = () => {
   const navigate = useNavigate();
 
-  // 체크박스 상태 관리
   const [notifications, setNotifications] = useState({
     all: false,
     myProfile: false,
@@ -37,7 +36,6 @@ const AlarmSet = () => {
       setNotifications((prev) => {
         const newState = { ...prev, [name]: checked };
 
-        // 모든 개별 체크박스가 선택되면 "모든 알림 받기" 체크
         newState.all =
           newState.myProfile &&
           newState.dailyQuestion &&

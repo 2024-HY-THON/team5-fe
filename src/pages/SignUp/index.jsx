@@ -22,10 +22,10 @@ const SignUp = () => {
     4: '/assets/img/purplestar.svg',
   };
 
-  const profileSrc = profiles[selectedProfile] || profiles[1]; // 기본 프로필 설정
+  const profileSrc = profiles[selectedProfile] || profiles[1];
 
   const handleGoToProfile = () => {
-    navigate('/some-other-page'); // 원하는 페이지로 이동
+    navigate('/home');
   };
 
   return (

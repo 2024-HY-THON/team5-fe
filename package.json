@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.8",
     "react": "^18.3.1",
@@ -27,7 +28,7 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "set PORT=8080 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

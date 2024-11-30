@@ -20,7 +20,7 @@ export const Title = styled.h1`
   font-size: 24px;
   color: #525252;
   margin-bottom: 2px;
-  text-align: center; /* 중앙 정렬 */
+  text-align: center;
 `;
 
 export const ProfileContainer = styled.div`
@@ -28,8 +28,8 @@ export const ProfileContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
-  margin-bottom: 50px; /* 여백 추가 */
-  max-width: 300px; /* 최대 너비 설정 */
+  margin-bottom: 50px;
+  max-width: 300px;
 `;
 
 export const ProfileOption = styled.div`
@@ -39,7 +39,7 @@ export const ProfileOption = styled.div`
   transition: border 0.3s;
   background-color: #f2f2f2;
   width: 120px;
-  height: 120px; /* 프로필 옵션 크기 조정 */
+  height: 120px;
   margin: 10px;
   border: 2px solid transparent;
 
@@ -58,10 +58,10 @@ export const UseProfileButton = styled.button`
   color: white;
   border: none;
   border-radius: 50px;
-  padding: 16px 40px; /* 패딩 조정 */
+  padding: 16px 40px;
   font-size: 16px;
   cursor: pointer;
-  width: 90%; /* 버튼을 전체 너비로 설정 */
+  width: 90%;
   margin-top: 50px;
 
   &:hover {
