@@ -13,8 +13,7 @@ import {
 const SignUp = () => {
   const navigate = useNavigate();
   const selectedProfile = localStorage.getItem('selectedProfile');
-  const nickname = localStorage.getItem('nickname'); // 로컬 스토리지에서 닉네임 가져오기
-
+  const nickname = localStorage.getItem('nickname');
   const profiles = {
     1: '/assets/img/yellowstar.svg',
     2: '/assets/img/bluestar.svg',
@@ -24,8 +23,16 @@ const SignUp = () => {
 
   const profileSrc = profiles[selectedProfile] || profiles[1];
 
+  const generateRandomNumber = () => {
+    const rand = Math.floor(1000 + Math.random() * 9000);
+    localStorage.setItem('code', rand);
+    return rand;
+  };
+
+  const randomNumber = generateRandomNumber();
+
   const handleGoToProfile = () => {
-    navigate('/home');
+    navigate('/');
   };
 
   return (
@@ -36,7 +43,9 @@ const SignUp = () => {
       <ProfileContainer>
         <ProfileImage src={profileSrc} alt="선택된 프로필" />
       </ProfileContainer>
-      <Nickname>{nickname ? `닉네임 #${nickname}` : '닉네임 없음'}</Nickname>
+      <Nickname>
+        {nickname ? `${nickname} #${randomNumber}` : '닉네임 없음'}
+      </Nickname>
       <GoToProfileButton onClick={handleGoToProfile}>
         별록 보러가기
       </GoToProfileButton>

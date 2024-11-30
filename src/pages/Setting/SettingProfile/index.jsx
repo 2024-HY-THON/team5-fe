@@ -18,9 +18,17 @@ const Character = [STAR_YELLOW, STAR_BLUE, STAR_RED, STAR_PURPLE];
 
 const SettingProfile = () => {
   const [isChangeImage, setIsChangeImage] = useState(false);
+  const [search, setSearch] = useState('');
   const navigate = useNavigate();
   const [index, setIndex] = useState(1);
-
+  const handleSubmit = () => {
+    localStorage.setItem('selectedProfile', index);
+    navigate(-1);
+  };
+  const handleSubmit2 = () => {
+    localStorage.setItem('nick', search);
+    navigate(-1);
+  };
   return (
     <S.SettingProfileWrapper>
       <S.HeaderWrapper>
@@ -40,10 +48,14 @@ const SettingProfile = () => {
             <S.ChangeIcon src={CHANGE_ICON} alt="change" />
           </S.GrayCircle>
           <S.DefaultText>닉네임 변경</S.DefaultText>
-          <S.NickNameInput placeholder="2-8자 이내 한글 또는 영문" />
+          <S.NickNameInput
+            placeholder="2-8자 이내 한글 또는 영문"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
           <S.BottomWrapper onClick={() => setIndex(-1)}>
             <S.Secession>계정 탈퇴하기</S.Secession>
-            <S.Button onClick={() => navigate(-1)}>변경사항 저장</S.Button>
+            <S.Button onClick={() => handleSubmit2()}>변경사항 저장</S.Button>
           </S.BottomWrapper>
         </S.InnerWrapper>
       ) : (
@@ -53,7 +65,7 @@ const SettingProfile = () => {
             <S.Div onClick={() => setIndex(0)}>
               <img src={Character[0]} alt="" />
               {index === 0 && (
-                <S.CheckBox>
+                <S.CheckBox style={{ zIndex: '10' }}>
                   <img
                     src={CHECKBOX_ICON}
                     alt="checkbox"
@@ -66,7 +78,7 @@ const SettingProfile = () => {
             <S.Div onClick={() => setIndex(1)}>
               <img src={Character[1]} alt="" />
               {index === 1 && (
-                <S.CheckBox>
+                <S.CheckBox style={{ zIndex: '10' }}>
                   <img
                     src={CHECKBOX_ICON}
                     alt="checkbox"
@@ -79,7 +91,7 @@ const SettingProfile = () => {
             <S.Div onClick={() => setIndex(2)}>
               <img src={Character[2]} alt="" />
               {index === 2 && (
-                <S.CheckBox>
+                <S.CheckBox style={{ zIndex: '10' }}>
                   <img
                     src={CHECKBOX_ICON}
                     alt="checkbox"
@@ -92,7 +104,7 @@ const SettingProfile = () => {
             <S.Div onClick={() => setIndex(3)}>
               <img src={Character[3]} alt="" />
               {index === 3 && (
-                <S.CheckBox>
+                <S.CheckBox style={{ zIndex: '10' }}>
                   <img
                     src={CHECKBOX_ICON}
                     alt="checkbox"
@@ -104,7 +116,7 @@ const SettingProfile = () => {
             </S.Div>
           </S.GridWrapper>
           <S.BottomWrapper>
-            <S.Button onClick={() => navigate(-1)}>선택완료</S.Button>
+            <S.Button onClick={() => handleSubmit()}>선택완료</S.Button>
           </S.BottomWrapper>
         </S.InnerWrapper>
       )}
