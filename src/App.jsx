@@ -41,6 +41,7 @@ function App() {
         <div className="flex flex-col h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/profile" element={<Profile />} />
