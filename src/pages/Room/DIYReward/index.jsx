@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CLOSE_BUTTON_ICON } from '../../../constants/Common/icon';
 import * as S from '../../../styles/Room/room.style';
@@ -24,6 +24,8 @@ const DIYReward = () => {
   const [selectBubble, setSelectBubble] = useState(null);
 
   const [name, setName] = useState('별별');
+
+  const rewardRef = useRef();
 
   const setSelectProps = {
     setSelectSticker1,
@@ -92,6 +94,7 @@ const DIYReward = () => {
               name={name}
               imgList={imgList}
               curImg={curImg}
+              rewardRef={rewardRef}
               {...selectProps}
             />
           </div>
@@ -104,7 +107,7 @@ const DIYReward = () => {
           </button>
         </div>
       </S.DIYWrapper>
-      <StickerSection {...setSelectProps} />
+      <StickerSection rewardRef={rewardRef} {...setSelectProps} />
     </>
   );
 };

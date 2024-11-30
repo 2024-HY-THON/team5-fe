@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import html2canvas from 'html2canvas';
+import { useNavigate } from 'react-router-dom';
+
 import { TagGrey } from '../../../../styles/Room/logHistory.style';
 import {
   STIKCER_NORMAL_SET,
@@ -8,7 +11,7 @@ import {
   STICKER_BUBBLE_SET,
 } from '../../../../constants/Room/stickers';
 
-const StickerSection = ({ ...props }) => {
+const StickerSection = ({ rewardRef, ...props }) => {
   const {
     setSelectSticker1,
     setSelectSticker2,
@@ -53,6 +56,16 @@ const StickerSection = ({ ...props }) => {
     setSelectTag(name);
   };
 
+  const navigate = useNavigate();
+  const handleGenerateAndNavigate = async () => {
+    if (rewardRef.current) {
+      const canvas = await html2canvas(rewardRef.current);
+      const dataURL = canvas.toDataURL('image/png');
+
+      navigate('/room/diyReward/result', { state: { image: dataURL } });
+    }
+  };
+
   return (
     <div className="w-full h-full bg-white flex flex-col justify-between px-[20px] py-[15px] mt-auto">
       <div className="flex mb-auto min-h-[30px] h-[30px] overflow-x-auto gap-[6px]">
@@ -82,6 +95,7 @@ const StickerSection = ({ ...props }) => {
       </div>
       <button
         type="submit"
+        onClick={handleGenerateAndNavigate}
         className="w-full h-[60px] mt-auto rounded-[50px] bg-[#1f1f1f] flex items-center justify-center text-white"
       >
         <p>꾸미기 완료</p>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RewardImg = ({ name, imgList, curImg, ...props }) => {
+const RewardImg = ({ name, imgList, curImg, rewardRef, ...props }) => {
   const {
     selectSticker1,
     selectSticker2,
@@ -12,7 +12,11 @@ const RewardImg = ({ name, imgList, curImg, ...props }) => {
   } = props;
 
   return (
-    <div className="w-full h-full relative">
+    <div
+      id="rewardImgArea"
+      ref={rewardRef}
+      className="w-full h-full relative overflow-hidden"
+    >
       <img
         src={imgList[curImg]}
         alt="reward_blue"
