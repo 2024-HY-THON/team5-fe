@@ -23,6 +23,8 @@ const RIGHT_ICON = '/assets/icons/right_icon.svg';
 
 const NONE_ICON = '/assets/icons/none.svg';
 
+const GREY_RIGHT = '/assets/icons/grey_right.svg';
+
 export {
   MAIN_LOGO,
   STAR_YELLOW,
@@ -41,4 +43,5 @@ export {
   LEFT_ICON,
   RIGHT_ICON,
   NONE_ICON,
+  GREY_RIGHT,
 };
