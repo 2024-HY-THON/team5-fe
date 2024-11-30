@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { TAG_LIST } from '../../../../constants/Room/tags';
 import { Tag } from '../../../../styles/Room/logUpdate.style';
 
@@ -12,7 +12,7 @@ const TagSection = ({ create }) => {
     setSelectTag(name);
   };
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,9 +21,8 @@ const TagSection = ({ create }) => {
       content,
     };
 
-    console.log('submitData???', submitData);
     create({ body: submitData });
-    // navigate('../detail');
+    navigate('/room/diyReward');
   };
 
   return (

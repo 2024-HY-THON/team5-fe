@@ -60,7 +60,7 @@ const DIYReward = () => {
         <button
           className="ml-auto pr-[10px]"
           type="button"
-          onClick={() => navigate('../rewards')}
+          onClick={() => navigate('/room/diyReward/exitWrite')}
         >
           <img
             src={CLOSE_BUTTON_ICON}
