@@ -4,18 +4,27 @@ import { useNavigate } from 'react-router-dom';
 import * as S from '../../styles/Setting/setting.style';
 // assets
 import { MEDAL_ICON } from '../../constants/Friend/icon';
-import { BLUECHARACTER_ICON, STAR_ICON } from '../../constants/Community/icon';
+import { STAR_ICON } from '../../constants/Community/icon';
 import { BRUSH_ICON } from '../../constants/Setting/icon';
-
+const profiles = [
+  '/assets/img/yellowstar.svg',
+  '/assets/img/bluestar.svg',
+  '/assets/img/redstar.svg',
+  '/assets/img/purplestar.svg',
+];
 const Setting = () => {
   const navigate = useNavigate();
+  const nickname = localStorage.getItem('nick');
+  const code = localStorage.getItem('code');
+  const profile = localStorage.getItem('selectedProfile');
+
   return (
     <S.SettingWrapper>
       <S.Header>환경설정</S.Header>
       <S.GrayCircle width={112} height={112} style={{ marginTop: '16px' }}>
-        <img src={BLUECHARACTER_ICON} alt="profile" />
+        <img src={profiles[profile]} alt="profile" />
       </S.GrayCircle>
-      <S.NickName>홍길동</S.NickName>
+      <S.NickName>{`${nickname} #${code}`}</S.NickName>
       <S.EditButton onClick={() => navigate('profile')}>
         프로필 수정
       </S.EditButton>
