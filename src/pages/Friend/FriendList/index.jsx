@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
 import * as S from '../../../styles/Friend/friend.style';
@@ -12,6 +12,8 @@ import {
 } from '../../../constants/Friend/icon';
 import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
+import { getFriends } from '../../../services/Friend/user';
+
 const FriendList = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([
@@ -19,6 +21,14 @@ const FriendList = () => {
     { name: '영희', id: 6 },
     { name: '훈이', id: 7 },
   ]);
+
+  useEffect(() => {
+    if (process.env.PUBLIC_URL === 'production') {
+      getFriends().then((res) => {
+        setData(res);
+      });
+    }
+  }, []);
 
   const removeIndex = (idx) => {
     setData(data.filter((_, index) => index !== idx));

@@ -17,6 +17,9 @@ import LogHistory from './pages/Room/LogHistory';
 import MyRewards from './pages/Room/MyRewards';
 import ShareReward from './pages/Room/ShareReward';
 import CreateLog from './pages/Room/CreateLog';
+import DIYReward from './pages/Room/DIYReward';
+import ResultReward from './pages/Room/ResultReward';
+import ExitWrite from './pages/Room/ExitWrite';
 import Community from './pages/Community';
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
@@ -39,6 +42,7 @@ function App() {
         <div className="flex flex-col h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/profile" element={<Profile />} />
@@ -52,6 +56,9 @@ function App() {
               <Route path="rewards" element={<MyRewards />} />
               <Route path="shareReward" element={<ShareReward />} />
               <Route path="createLog" element={<CreateLog />} />
+              <Route path="diyReward" element={<DIYReward />} />
+              <Route path="diyReward/result" element={<ResultReward />} />
+              <Route path="diyReward/exitWrite" element={<ExitWrite />} />
             </Route>
             <Route path="/community" element={<Community />} />
             <Route path="/friend" element={<Outlet />}>

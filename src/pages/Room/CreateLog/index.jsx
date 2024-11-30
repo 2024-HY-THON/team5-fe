@@ -18,7 +18,7 @@ const CreateLog = () => {
         <button
           className="ml-auto pr-[10px]"
           type="button"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/room/diyReward/exitWrite')}
         >
           <img
             src={CLOSE_BUTTON_ICON}

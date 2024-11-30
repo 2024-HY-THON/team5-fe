@@ -9,6 +9,10 @@ const BottomNav = () => {
   const hiddenPaths = [
     '/room/update',
     '/room/shareReward',
+    '/room/diyReward',
+    '/room/createLog',
+    '/room/diyReward/exitWrite',
+    '/room/diyReward/result',
     '/signin',
     '/login',
     '/profile',

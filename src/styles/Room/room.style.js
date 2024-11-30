@@ -14,6 +14,29 @@ export const RoomWrapper = styled.body`
   position: static;
 `;
 
+export const DIYWrapper = styled.body`
+  background-color: ${(props) => props.styles?.bg || '#ffffff'};
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: ${screenPadding};
+  padding-bottom: ${(props) => props.styles?.isMain && '80px'};
+  position: static;
+`;
+
+export const ExitWrapper = styled.body`
+  background-color: ${(props) => props.styles?.bg || '#ffffff'};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: ${screenPadding};
+  padding-bottom: ${(props) => props.styles?.isMain && '80px'};
+  position: static;
+`;
 export const RoomHeader = styled.header`
   width: 100%;
   min-height: 54px;

@@ -18,6 +18,11 @@ const CLOSE_BUTTON_ICON = '/assets/icons/close_icon.svg';
 
 const BACK_ARROW_ICON = '/assets/Common/arrow_back.svg';
 
+const LEFT_ICON = '/assets/icons/left_icon.svg';
+const RIGHT_ICON = '/assets/icons/right_icon.svg';
+
+const NONE_ICON = '/assets/icons/none.svg';
+
 export {
   MAIN_LOGO,
   STAR_YELLOW,
@@ -33,4 +38,7 @@ export {
   BACK_ARROW_ICON,
   STAR_ICON,
   CLOSE_BUTTON_ICON,
+  LEFT_ICON,
+  RIGHT_ICON,
+  NONE_ICON,
 };

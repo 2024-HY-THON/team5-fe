@@ -12,7 +12,11 @@ const RealTime = () => {
         <S.CommunityContentHeader>실시간 인기 별록</S.CommunityContentHeader>
         <S.CommunityContent style={{ backgroundColor: '#70C1FF' }}>
           <div>
-            <img src={CHARACTER_ICON} alt="character" />
+            <img
+              src={CHARACTER_ICON}
+              alt="character"
+              style={{ width: '45px', height: '45px' }}
+            />
             <div>
               <S.CommunityContentTitle>#내일</S.CommunityContentTitle>
               <S.CommunityContentText>해커톤이 열린다</S.CommunityContentText>

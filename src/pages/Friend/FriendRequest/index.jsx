@@ -12,8 +12,24 @@ import {
 } from '../../../constants/Friend/icon';
 import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
 
+import { FriendRequests } from '../../../styles/Friend/friend.style';
+
 const FriendRequest = () => {
   const navigate = useNavigate();
+
+  const fetchFriendRequests = async () => {
+    if (process.env.PUBLIC_URL === 'production') {
+      FriendRequests().then((res) => {
+        if (res === 200) {
+          console.log('success');
+        } else {
+          console.log('fail');
+        }
+      });
+      // fetch friend requests
+    }
+    // fetch friend requests
+  };
   return (
     <S.FriendWrapper>
       <Header header="친구 요청" />
@@ -23,7 +39,7 @@ const FriendRequest = () => {
             <img src={BLUECHARACTER_ICON} alt="" />
           </S.FriendListProfile>
           <S.FriendListNickname>짱구</S.FriendListNickname>
-          <S.FriendRequests>
+          <S.FriendRequests onClick={() => fetchFriendRequests()}>
             <S.FriendButton src={ACCEPT_ICON} alt="accept-friend" />
             <S.FriendButton src={CANCEL_ICON} alt="cancel-friend" />
           </S.FriendRequests>

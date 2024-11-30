@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
 import * as S from '../../styles/Setting/setting.style';
@@ -6,12 +6,14 @@ import * as S from '../../styles/Setting/setting.style';
 import { MEDAL_ICON } from '../../constants/Friend/icon';
 import { STAR_ICON } from '../../constants/Community/icon';
 import { BRUSH_ICON } from '../../constants/Setting/icon';
+
 const profiles = [
   '/assets/img/yellowstar.svg',
   '/assets/img/bluestar.svg',
   '/assets/img/redstar.svg',
   '/assets/img/purplestar.svg',
 ];
+
 const Setting = () => {
   const navigate = useNavigate();
   const nickname = localStorage.getItem('nick');
