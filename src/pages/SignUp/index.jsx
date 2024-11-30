@@ -25,7 +25,7 @@ const SignUp = () => {
   const profileSrc = profiles[selectedProfile] || profiles[1];
 
   const handleGoToProfile = () => {
-    navigate('/home');
+    navigate('/');
   };
 
   return (
