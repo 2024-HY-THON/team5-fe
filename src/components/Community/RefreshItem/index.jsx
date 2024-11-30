@@ -9,56 +9,74 @@ import Lottie from 'lottie-react';
 import Stamp from '../../../constants/Community/stamp.json';
 const RefreshItem = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+  const dummy = [
+    { title: '#산책', content: '넘어졌다.' },
+    { title: '#등산', content: '힘들다' },
+    { title: '#점심', content: '굶었다.' },
+  ];
+  const [recommend, setRecommend] = useState([0, 3, 1]);
+
+  const handleOnClick = (idx) => {
+    setIndex(idx);
+    setIsOpen(true);
+    setRecommend((prev) => {
+      let temp = [...prev];
+      temp[idx] = temp[idx] + 1;
+      return temp;
+    });
+  };
+
   return (
     <S.RefreshItemWrapper>
       <S.Content>
         <S.ContentHeader>
-          <S.ContentTitle>제목</S.ContentTitle>
-          <S.ContentDate>날짜</S.ContentDate>
+          <S.ContentTitle>{dummy[0].title}</S.ContentTitle>
+          <S.ContentDate>2024.11.30</S.ContentDate>
         </S.ContentHeader>
         <S.ContentDivWrap>
-          <S.ContentDiv>내용내용내용</S.ContentDiv>
-          <S.ContentButton onClick={() => setIsOpen(true)}>
+          <S.ContentDiv>{dummy[0].content}</S.ContentDiv>
+          <S.ContentButton onClick={() => handleOnClick(0)}>
             <img
               src={STAR_ICON}
               alt="star"
               style={{ width: '20px', height: '20px' }}
             />
-            <span>12개</span>
+            <span>{`${recommend[0]}개`}</span>
           </S.ContentButton>
         </S.ContentDivWrap>
       </S.Content>
       <S.Content>
         <S.ContentHeader>
-          <S.ContentTitle>제목</S.ContentTitle>
-          <S.ContentDate>날짜</S.ContentDate>
+          <S.ContentTitle>{dummy[1].title}</S.ContentTitle>
+          <S.ContentDate>2024.11.30</S.ContentDate>
         </S.ContentHeader>
         <S.ContentDivWrap>
-          <S.ContentDiv>내용내용내용</S.ContentDiv>
-          <S.ContentButton>
+          <S.ContentDiv>{dummy[1].content}</S.ContentDiv>
+          <S.ContentButton onClick={() => handleOnClick(1)}>
             <img
               src={STAR_ICON}
               alt="star"
               style={{ width: '20px', height: '20px' }}
             />
-            <span>12개</span>
+            <span>{`${recommend[1]}개`}</span>
           </S.ContentButton>
         </S.ContentDivWrap>
       </S.Content>
       <S.Content>
         <S.ContentHeader>
-          <S.ContentTitle>제목</S.ContentTitle>
-          <S.ContentDate>날짜</S.ContentDate>
+          <S.ContentTitle>{dummy[2].title}</S.ContentTitle>
+          <S.ContentDate>2024.11.30</S.ContentDate>
         </S.ContentHeader>
         <S.ContentDivWrap>
-          <S.ContentDiv>내용내용내용</S.ContentDiv>
-          <S.ContentButton>
+          <S.ContentDiv>{dummy[2].content}</S.ContentDiv>
+          <S.ContentButton onClick={() => handleOnClick(2)}>
             <img
               src={STAR_ICON}
               alt="star"
               style={{ width: '20px', height: '20px' }}
             />
-            <span>12개</span>
+            <span>{`${recommend[2]}개`}</span>
           </S.ContentButton>
         </S.ContentDivWrap>
       </S.Content>
@@ -85,12 +103,12 @@ const RefreshItem = () => {
                   alt=""
                   style={{ width: '19px', height: '19px' }}
                 />
-                <span>12</span>
+                <span>{`${recommend[index]}개`}</span>
               </S.ModalStar>
             </S.ModalTop>
             <S.ModalContents>
-              <span>산책</span>
-              <div>dadsadsdsa</div>
+              <span>{dummy[index].title}</span>
+              <div>{dummy[index].content}</div>
             </S.ModalContents>
             <S.LottileContainer>
               <div>

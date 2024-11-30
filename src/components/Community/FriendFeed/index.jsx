@@ -10,7 +10,12 @@ import Modal from '../../Friend/Modal';
 
 const FriendFeed = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [recommend, setRecommend] = useState(12);
 
+  const handleOnclick = () => {
+    setRecommend(recommend + 1);
+    setIsOpen(true);
+  };
   return (
     <S.FriendFeedWrapper>
       <S.Content>
@@ -19,22 +24,22 @@ const FriendFeed = () => {
             <S.GrayCircle>
               <img src={BLUECHARACTER_ICON} alt="" />
             </S.GrayCircle>
-            <S.Nickname>닉네임</S.Nickname>
+            <S.Nickname>철수</S.Nickname>
           </S.Profile>
           <div>
-            <S.ContentTitle>제목</S.ContentTitle>
-            <S.ContentDiv>내용내용</S.ContentDiv>
-            <S.ContentDate>20312321</S.ContentDate>
+            <S.ContentTitle>#학원</S.ContentTitle>
+            <S.ContentDiv>수학학원 쨈</S.ContentDiv>
+            <S.ContentDate>2024-11-30</S.ContentDate>
           </div>
         </div>
         <div>
-          <S.ContentButton onClick={() => setIsOpen(true)}>
+          <S.ContentButton onClick={() => handleOnclick()}>
             <img
               src={STAR_ICON}
               alt=""
               style={{ width: '19px', height: '19px' }}
             />
-            <span>12</span>
+            <span>{recommend}</span>
           </S.ContentButton>
         </div>
       </S.Content>
@@ -51,8 +56,8 @@ const FriendFeed = () => {
                   />
                 </S.GrayCircle>
                 <S.ModalNameDate>
-                  <S.ModalName>익명 별록</S.ModalName>
-                  <S.ModalDate>2023.12.12</S.ModalDate>
+                  <S.ModalName>철수</S.ModalName>
+                  <S.ModalDate>2024.11.30</S.ModalDate>
                 </S.ModalNameDate>
               </S.ModalHeader>
               <S.ModalStar>
@@ -61,12 +66,12 @@ const FriendFeed = () => {
                   alt=""
                   style={{ width: '19px', height: '19px' }}
                 />
-                <span>12</span>
+                <span>{recommend}</span>
               </S.ModalStar>
             </S.ModalTop>
             <S.ModalContents>
-              <span>산책</span>
-              <div>dadsadsdsa</div>
+              <span>#학원</span>
+              <div>수학학원 쨈</div>
             </S.ModalContents>
             <S.LottileContainer>
               <div>

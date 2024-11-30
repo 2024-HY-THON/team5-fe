@@ -120,6 +120,10 @@ export const GridWrapper = styled.div`
     background-color: #f2f2f2;
     border-radius: 50%;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   margin-top: 42px;
@@ -157,3 +161,5 @@ export const Blur = styled.div`
 
   border-radius: 50%;
 `;
+
+export const Div = styled.div``;
