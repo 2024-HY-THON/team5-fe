@@ -5,7 +5,6 @@
   "dependencies": {
     "@tanstack/react-query": "^5.62.0",
     "@testing-library/user-event": "^13.5.0",
-    "lottie-react": "^2.4.0",
     "axios": "^1.7.8",
     "lottie-react": "^2.4.0",
     "react": "^18.3.1",
