@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import html2canvas from 'html2canvas';
+import { toPng } from 'html-to-image';
 import { useNavigate } from 'react-router-dom';
 import { NONE_ICON } from '../../../../constants/Common/icon';
 
@@ -58,13 +58,11 @@ const StickerSection = ({ rewardRef, ...props }) => {
   };
 
   const navigate = useNavigate();
-  const handleGenerateAndNavigate = async () => {
-    if (rewardRef.current) {
-      const canvas = await html2canvas(rewardRef.current);
-      const dataURL = canvas.toDataURL('image/png');
 
-      navigate('/room/diyReward/result', { state: { image: dataURL } });
-    }
+  const exportElementAsPNG = () => {
+    toPng(rewardRef.current).then((image) => {
+      navigate('/room/diyReward/result', { state: { image } });
+    });
   };
 
   return (
@@ -104,7 +102,7 @@ const StickerSection = ({ rewardRef, ...props }) => {
       </div>
       <button
         type="submit"
-        onClick={handleGenerateAndNavigate}
+        onClick={exportElementAsPNG}
         className="w-full h-[60px] mt-auto rounded-[50px] bg-[#1f1f1f] flex items-center justify-center text-white"
       >
         <p>꾸미기 완료</p>
