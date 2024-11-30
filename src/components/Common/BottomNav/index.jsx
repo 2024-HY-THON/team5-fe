@@ -16,7 +16,7 @@ const BottomNav = () => {
     '/signup',
     '/friend',
     '/friend/request',
-    '/settins/profile',
+    '/settings/profile',
   ];
 
   return !hiddenPaths.includes(location.pathname) ? (

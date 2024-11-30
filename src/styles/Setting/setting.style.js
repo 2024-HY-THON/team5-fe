@@ -104,10 +104,11 @@ export const Company = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 29px;
+  gap: 20px;
   margin-top: 35px;
 
-  & > span {
+  & > span,
+  & > button > span {
     color: #000;
     font-size: 14px;
     font-style: normal;
