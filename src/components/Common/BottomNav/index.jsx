@@ -9,11 +9,11 @@ const BottomNav = () => {
   const hiddenPaths = [
     '/room/update',
     '/room/shareReward',
-    'signin',
-    'login',
-    'profile',
-    'alarmset',
-    'signup',
+    '/signin',
+    '/login',
+    '/profile',
+    '/alarmset',
+    '/signup',
   ];
 
   return !hiddenPaths.includes(location.pathname) ? (

@@ -22,14 +22,14 @@ export const Title = styled.h1`
 `;
 
 export const ProfileContainer = styled.div`
-  background-color: #f0f0f0; /* 회색 배경 */
-  border-radius: 50%; /* 동그란 모양 */
-  padding: 20px; /* 여백 */
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  margin-bottom: 20px; /* 프로필과 닉네임 사이의 여백 */
+  margin-bottom: 20px;
 `;
 
 export const ProfileImage = styled.img`
@@ -45,7 +45,7 @@ export const Nickname = styled.p`
 `;
 
 export const GoToProfileButton = styled.button`
-  padding: 10px 20px;
+  padding: 16px 20px;
   background-color: #ff6b6b;
   color: white;
   border: none;

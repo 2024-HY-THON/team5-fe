@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; /* 중앙 정렬 유지 */
-  justify-content: flex-start; /* 위쪽 정렬 */
+  align-items: center;
+  justify-content: flex-start;
   min-height: 100vh;
   background-color: #ffffff;
-  padding: 20px; /* 여백 추가 */
-  font-family: 'Pretendard', sans-serif; /* Pretendard 폰트 설정 */
+  padding: 20px;
 `;
 
 export const Logo = styled.img`
@@ -28,21 +27,21 @@ export const Title = styled.h1`
 export const OptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 왼쪽 정렬 */
-  width: 100%; /* 전체 너비 사용 */
+  align-items: flex-start;
+  width: 100%;
   margin-top: 40px;
 `;
 
 export const Option = styled.label`
   display: flex;
-  align-items: center; /* 수평 정렬 */
+  align-items: center;
   margin: 10px 0;
 `;
 
 export const OptionText = styled.span`
-  font-size: 16px; /* 글씨 크기 조정 */
-  color: #333; /* 글씨 색상 조정 */
-  margin-left: 5px; /* 체크박스와 텍스트 간격을 좁힘 */
+  font-size: 16px;
+  color: #333;
+  margin-left: 5px;
   font-weight: bold;
 `;
 
@@ -53,7 +52,7 @@ export const CheckBox = styled.input`
   border-radius: 50%;
   border: 2px solid #cccccc;
   position: relative;
-  margin-right: 5px; /* 텍스트와의 간격 조정 */
+  margin-right: 5px;
 
   &:checked {
     background-color: #ffcc00;
@@ -61,7 +60,7 @@ export const CheckBox = styled.input`
   }
 
   &:checked::after {
-    content: '✔️'; /* 체크 표시 추가 */
+    content: '✔️';
     position: absolute;
     top: 0;
     left: 0;
@@ -75,9 +74,9 @@ export const CheckBox = styled.input`
 `;
 
 export const Description = styled.span`
-  font-size: 14px; /* 설명 글씨 크기 조정 */
-  color: #666; /* 설명 색상 조정 */
-  margin-left: 34px; /* 체크박스와 설명 간격 조정 */
+  font-size: 14px;
+  color: #666;
+  margin-left: 34px;
   transform: translateY(-10px);
 `;
 
@@ -86,10 +85,10 @@ export const ConfirmButton = styled.button`
   color: white;
   border: none;
   border-radius: 30px;
-  padding: 12px 25px; /* 패딩 조정 */
+  padding: 16px 25px;
   font-size: 16px;
   cursor: pointer;
-  width: 100%; /* 버튼을 전체 너비로 설정 */
+  width: 100%;
   margin-top: 100px;
 
   &:hover {
