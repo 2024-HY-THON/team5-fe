@@ -17,6 +17,8 @@ import LogHistory from './pages/Room/LogHistory';
 import MyRewards from './pages/Room/MyRewards';
 import ShareReward from './pages/Room/ShareReward';
 import CreateLog from './pages/Room/CreateLog';
+import DIYReward from './pages/Room/DIYReward';
+import ResultReward from './pages/Room/ResultReward';
 import Community from './pages/Community';
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
@@ -52,6 +54,8 @@ function App() {
               <Route path="rewards" element={<MyRewards />} />
               <Route path="shareReward" element={<ShareReward />} />
               <Route path="createLog" element={<CreateLog />} />
+              <Route path="diyReward" element={<DIYReward />} />
+              <Route path="diyReward/result" element={<ResultReward />} />
             </Route>
             <Route path="/community" element={<Community />} />
             <Route path="/friend" element={<Outlet />}>
