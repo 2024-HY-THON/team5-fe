@@ -31,6 +31,12 @@ const RewardImg = ({ name, imgList, curImg, rewardRef, ...props }) => {
       >
         {name}
       </p>
+      <textarea
+        className="placeholder:text-[#ADADAD] text-center text-[12px] text-wrap w-[110px] h-fit absolute bottom-[60px] bg-transparent left-[40px]"
+        name="tag"
+        maxLength={10}
+        placeholder="입력해주세요."
+      />
       <div className="w-[40px] h-[40px] absolute top-[65px] left-[35px] rotate-[-22.5deg]">
         {selectSticker1 && <img src={selectSticker1} alt="sticker1" />}
       </div>
