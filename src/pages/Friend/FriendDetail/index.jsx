@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 // styled-components
 import * as S from '../../../styles/Friend/friendDetail.style';
 // assets
 import { EXIT_ICON, MEDAL_ICON } from '../../../constants/Friend/icon';
 import { BLUECHARACTER_ICON } from '../../../constants/Community/icon';
+
+import { getFriendRequests } from '../../../services/Friend/user';
 
 const Dummy = [
   { name: '미희', id: 0 },
@@ -20,6 +22,14 @@ const Dummy = [
 const FriendDetail = () => {
   const params = useParams();
   const navigate = useNavigate();
+  const [data, setData] = useState(() => {
+    if (process.env.PUBLIC_URL === 'production') {
+      getFriendRequests().then((res) => {
+        setData(res);
+        console.log(data);
+      });
+    }
+  });
   return (
     <S.FriendDetailWrapper>
       <S.FreindDetailExitButton

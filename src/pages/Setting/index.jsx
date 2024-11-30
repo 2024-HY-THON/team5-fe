@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // styled-components
 import * as S from '../../styles/Setting/setting.style';
@@ -7,8 +7,20 @@ import { MEDAL_ICON } from '../../constants/Friend/icon';
 import { BLUECHARACTER_ICON, STAR_ICON } from '../../constants/Community/icon';
 import { BRUSH_ICON } from '../../constants/Setting/icon';
 
+import { getSetting } from '../../services/Setting/setting';
 const Setting = () => {
   const navigate = useNavigate();
+  const [data, setData] = React.useState([]);
+
+  useEffect(() => {
+    if (process.env.PUBLIC_URL === 'production') {
+      getSetting().then((res) => {
+        setData(res);
+        console.log(data);
+      });
+    }
+  }, [data]);
+
   return (
     <S.SettingWrapper>
       <S.Header>환경설정</S.Header>
