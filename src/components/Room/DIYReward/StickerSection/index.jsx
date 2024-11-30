@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import html2canvas from 'html2canvas';
 import { useNavigate } from 'react-router-dom';
+import { NONE_ICON } from '../../../../constants/Common/icon';
 
 import { TagGrey } from '../../../../styles/Room/logHistory.style';
 import {
@@ -80,7 +81,15 @@ const StickerSection = ({ rewardRef, ...props }) => {
           </TagGrey>
         ))}
       </div>
-      <div className="flex grow min-h-0 min-w-[315px] overflow-y-auto flex-wrap">
+      <div className="flex grow min-h-0 min-w-[315px] py-[10px] overflow-y-auto flex-wrap">
+        <button
+          onClick={() => {
+            selectMap?.[selectTag]?.(null);
+          }}
+          className="w-[105px] h-[105px] rounded-[20px] bg-[#F2F2F2] flex items-center justify-center"
+        >
+          <img src={NONE_ICON} alt="none" className="h-[33px] w-[33px]" />
+        </button>
         {filterMap[selectTag]?.map((sticker, index) => (
           <button
             key={index}
