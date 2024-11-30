@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { screenPadding } from '../../constants/Common/styles';
 
-export const HomeWrapper = styled.body`
+export const HomeWrapper = styled.div`
   overflow-y: auto;
   background-color: #ffffff;
   display: flex;
@@ -12,15 +12,14 @@ export const HomeWrapper = styled.body`
   padding: ${screenPadding};
 `;
 
-export const HomeHeader = styled.header`
+export const HomeHeader = styled.div`
   width: 100%;
   height: 50px;
   background-color: #fff;
   padding: 10px;
-  display: flex;
-  flex: 0 0 auto;
   align-items: center;
   justify-content: left;
+  position: relative;
 `;
 
 export const HomeBanner = styled.div`
