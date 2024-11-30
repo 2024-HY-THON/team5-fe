@@ -54,7 +54,7 @@ const SignIn = () => {
       const newCheckedState = {
         ...prev,
         [name]: !prev[name],
-        all: false, // 전체 동의는 해제
+        all: false,
       };
 
       if (

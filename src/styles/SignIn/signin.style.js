@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   background-color: #ffffff;
-  font-family: 'Pretendard', sans-serif;
 `;
 
 export const Overlay = styled.div`
@@ -16,11 +15,11 @@ export const Overlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  z-index: 1000; /* 오버레이가 다른 요소 위에 표시되도록 설정 */
+  z-index: 1000;
 `;
 
 export const AgreementContainer = styled.div`
@@ -130,7 +129,7 @@ export const CheckBox = styled.input`
   }
 
   &:checked::after {
-    content: '✔️'; /* 체크 표시 추가 */
+    content: '✔️';
     position: absolute;
     top: 0;
     left: 0;
