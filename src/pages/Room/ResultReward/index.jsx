@@ -1,10 +1,13 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CLOSE_BUTTON_ICON } from '../../../constants/Common/icon';
 import * as S from '../../../styles/Room/room.style';
+import { BACK_ARROW_ICON } from '../../../constants/Common/icon';
 
 const ResultReward = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const image = location.state?.image;
 
   if (!image) {
@@ -21,12 +24,22 @@ const ResultReward = () => {
   return (
     <>
       <S.RoomHeader className="flex">
-        <div className="mr-auto w-[30px]" />
+        <button
+          className="mr-auto pl-[10px]"
+          type="button"
+          onClick={() => navigate(-1)}
+        >
+          <img
+            src={BACK_ARROW_ICON}
+            alt="back"
+            style={{ width: '20px', height: '20px' }}
+          />
+        </button>
         <h4>상장 출력하기</h4>
         <button
           className="ml-auto pr-[10px]"
           type="button"
-          // onClick={() => navigate('../rewards')}
+          onClick={() => navigate('/room')}
         >
           <img
             src={CLOSE_BUTTON_ICON}
